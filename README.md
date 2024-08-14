@@ -145,10 +145,14 @@ The most dominant APR MDC Description is Diseases and Disorders of the Respirato
 
 ## Colinearity and Multi Colinearity.
 Checking for collinearity between dependent and independent variables.
+
 ![image](https://github.com/user-attachments/assets/135bd69a-3536-4681-90fd-29d623db9311)
+
 Checking for Multicolinearity High correlation,(e.g above 0.7)indicates multicollinearity. From the dia gram above, the total charge and total charges had multicolinearity.
+
 We will therefore use PCA to deal with multicolinearity as they are important columns for our analysis and therefore we cannot drop them.
 ![image](https://github.com/user-attachments/assets/47b17327-4cbe-4fce-8599-4407be337b6c)
+
 PCA reduces the variables into principal components that reduces multicolinearity
 
 # 4. Modelling
@@ -242,7 +246,7 @@ For this models, we used PCA to obtain principal componenets then trained our da
 
 For these models, we utilized the entire dataset. The full dataset allows these models to fully capture the patterns and complexities present in the data. Deep learning models, in particular, benefit from larger datasets due to their capacity to learn intricate patterns and dependencies. XG Boost was identified as the best model from the ROC Curve, we then trained it using the entire dataset and then used it for feature importance.
 
-## Machine Learning Models
+### Machine Learning Models
 
 **Logistic Regression**
 1) For the Extreme class, the model has a relatively higher precision but very low recall. This indicates that when the model predicts the Extreme class, it is correct 57% of the time, but it only identifies 12% of the true Extreme cases.
@@ -275,11 +279,9 @@ The overall accuracy of the decision tree model is 43.78%, meaning the model cor
 
 4)The precision for the "Moderate" class is 47%, showing that there are some false positives. The recall is 46%, suggesting a number of false negatives.
 
-## Deep Learning Models
+### Deep Learning Models
 
-### Feed Forward Neural Network
-
-### Interpretation
+**Feed Forward Neural Network**
 
 **Class 0 (Extreme):**
 
@@ -333,9 +335,7 @@ Class 2 also performs well but has slightly lower precision compared to Class 3.
 
 Class 0 and Class 1 show lower performance, particularly in recall, indicating the model struggles to correctly identify these classes.
 
-### 2. Multi Layer Perceptron.
-
-#### Interpretation
+ **Multi Layer Perceptron.**
 
 **Class 0 (Extreme):**
 
@@ -388,9 +388,7 @@ Class 0 and Class 1 have lower precision and recall compared to Class 2 and Clas
 
 Class 2 and Class 3 are identified more accurately, with Class 3 being the best-performing class in terms of precision and recall.
 
-###  Artifical Neural Network
-
-#### Interpretation
+**Artifical Neural Network**
 
 **Class 0 (Extreme):**
 
@@ -436,9 +434,7 @@ Class 0 and Class 2 have moderate performance, with balanced precision and recal
 
 Class 1 has lower precision and recall compared to other classes, indicating that the model struggles more with predicting this class accurately.
 
-## Ensemble Methods
-
-#### Interpretation
+**Ensemble Methods**
 
 **Class 0 (Extreme):**
 
@@ -478,7 +474,7 @@ Accuracy (0.72): Overall, the model is 72% accurate in its predictions across al
 
 The model performs well for Class 3 and reaches our target but there are opportunities to enhance recall and precision for the other classes to improve overall performance.
 
-**ROC CURVE**
+### ROC CURVE
 
 ![image](https://github.com/user-attachments/assets/53929371-24cc-4f7f-8432-3378323aaa10)
 
@@ -497,6 +493,7 @@ The overall accuracy of the XGBoost model is approximately 72.04%, meaning it co
 4) The precision for the "Moderate" class is 47%, showing that there are some false positives. The recall is 46%, suggesting a number of false negatives.
 
 ![image](https://github.com/user-attachments/assets/c6081ad4-8df5-45d2-8413-136c834e38c8)
+
 # 5. Conclusion
 From the above analysis, we can conclude that;
 1) The APR Severity of Illness Code is the most significant predictor of the APR Risk of Mortality meaning. This indicates that the more severe a patient's condition, the higher their risk of mortality.
