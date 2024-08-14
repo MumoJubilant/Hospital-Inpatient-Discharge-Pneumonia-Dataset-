@@ -2,6 +2,20 @@
 
 A classification analysis to predict mortality rate of Pneumonia patients.
 
+ ## Collaborators
+ 
+ 1. Jubilant Mutuku
+ 
+ 2. Ivan Wawire
+ 
+ 3. Millicent Muthomi
+ 
+ 4. Maureen Muriithi
+ 
+ 5. Wilson Wachira
+ 
+ 6. Lydia Masabarakiza
+
 # Problem Statement.
 
 Healthcare providers and administrators in New York State aim to improve patient outcomes and reduce in-hospital mortality among pneumonia patients. In-hospital mortality occurs when patients succumb to their condition during their hospital stay, and it is crucial for healthcare providers to predict which patients are at the highest risk of mortality. By identifying these high-risk patients in advance, healthcare providers in New York can implement targeted interventions and allocate resources more effectively to improve patient care and survival rates.
@@ -94,42 +108,53 @@ Mostly patients have Minor Risk of Mortality.
 Patients have Medicare payment typology more
 
 ![image](https://github.com/user-attachments/assets/36eac9cc-e498-43e8-adb9-63198f24ab4b)
+
 The graph shows the top 10 facilities based on the number of records, with Montefiore Medical Center having the highest number of records.
 
 ![image](https://github.com/user-attachments/assets/5ccfd41b-73b6-4037-8884-19a119975b81)
+
 The most prevelant Zip Code is 122
 
 ![image](https://github.com/user-attachments/assets/1d42840a-673d-4c54-9ecc-f01a96ec4444)
+
 The top 10 lengths of stay predominantly range from 1 to 10 days, with shorter stays being much more common. In contrast, the bottom 10 lengths of stay, which are significantly longer, are rare, indicating that extended stays are exceptional in the dataset.
 
 ![image](https://github.com/user-attachments/assets/cbadc987-c818-41ee-b00d-1d2568bfd48b)
+
 The most dominant CCS diagnosis is Pneumonia that is either caused by tuberculosis or sexually transmitted diseases.
 
 ![image](https://github.com/user-attachments/assets/a70d49fb-6778-4401-8f4b-ccdd06211aa7)
+
 In the dataset, "NO PROC" is the most common CCS Procedure Description, indicating that no procedure was performed in these cases. In contrast, the least common descriptions, each with only one occurrence, include rare or less frequently performed procedures.
 
 ![image](https://github.com/user-attachments/assets/a5f9cdf3-362c-44e2-8868-cdd95b478ba4)
+
 The top 10 APR DRG descriptions primarily focus on pneumonia and respiratory conditions, with "Other pneumonia" and "OTHER PNEUMONIA" being the most common. Conversely, the bottom 10 descriptions are rare and involve specific or complex procedures such as bone marrow and heart transplants, with counts as low as 1 or 2.
 
 ![image](https://github.com/user-attachments/assets/4b76d4ef-2390-4119-86c4-9bae53e1aa6b)
+
 The most dominant APR MDC Description is Diseases and Disorders of the Respiratory System.
 
 ## Bi Variate Analysis.
 
 ### Variables vs Target Variable.
+
 ![image](https://github.com/user-attachments/assets/23d31534-e56a-4c3f-a96c-8713fde80a26)
 
 ![image](https://github.com/user-attachments/assets/d2f0441a-bdbc-498e-bcca-6c581e995d71)
 
 ### Gender Vs Other Features
+
 ![image](https://github.com/user-attachments/assets/f285afca-54f6-4e9c-a5ea-74200f0b05b6)
 
 ![image](https://github.com/user-attachments/assets/3e181fbb-3634-4c57-8043-6c219e245fd8)
 
 ## Total Costs Vs Other features
+
 ![image](https://github.com/user-attachments/assets/8ddea9fe-c32c-4b68-be7b-3e3de4548b58)
 
 ## Total Charges Vs Other features.
+
 ![image](https://github.com/user-attachments/assets/1c8876f4-fb68-48e5-a37f-9b9cb432279d)
 
 ## 3.3 Multivariate Analysis
@@ -151,6 +176,7 @@ Checking for collinearity between dependent and independent variables.
 Checking for Multicolinearity High correlation,(e.g above 0.7)indicates multicollinearity. From the dia gram above, the total charge and total charges had multicolinearity.
 
 We will therefore use PCA to deal with multicolinearity as they are important columns for our analysis and therefore we cannot drop them.
+
 ![image](https://github.com/user-attachments/assets/47b17327-4cbe-4fce-8599-4407be337b6c)
 
 PCA reduces the variables into principal components that reduces multicolinearity
@@ -326,11 +352,11 @@ F1-Score (0.84): Balances precision and recall for Class 3.
 
 Class 3 exhibits the highest precision and recall, making it the best-performing class in terms of both correctly identifying and predicting true positives. The high F1-Score confirms strong performance for this class, with few misclassifications.
 
-##### Overall Metrics
+#### Overall Metrics
 
 Accuracy (0.70): The model correctly classifies 70% of all instances across all classes. This is a general measure of model performance.
 
-##### Overall Insights
+#### Overall Insights
 
 Class 3 performs the best with high precision and recall, indicating the model is very effective in predicting this class.
 
@@ -338,7 +364,7 @@ Class 2 also performs well but has slightly lower precision compared to Class 3.
 
 Class 0 and Class 1 show lower performance, particularly in recall, indicating the model struggles to correctly identify these classes.
 
- #### Multi Layer Perceptron.
+#### Multi Layer Perceptron.
 
 **Interpretation**
 
@@ -383,11 +409,11 @@ F1-Score (0.84): Balances precision and recall for Class 3.
 
 Class 3 shows the highest performance in terms of precision, recall, and F1-Score. This indicates that the model identifies Class 3 instances very well, with a high degree of accuracy. The support is also high, showing it is a significant class in the dataset.
 
-##### Overall Metrics
+#### Overall Metrics
 
 Overall Accuracy (0.70): The model correctly predicts 70% of all instances across all classes.
 
-##### Overall Insights
+#### Overall Insights
 
 Class 0 and Class 1 have lower precision and recall compared to Class 2 and Class 3, indicating they are less well predicted.
 
@@ -429,11 +455,11 @@ Recall (0.84): The model identifies 84% of the actual Class 3 instances, reflect
 
 F1-Score (0.84): The F1-score for Class 3 is the highest, demonstrating the model's strong overall performance for this class.
 
-##### Overall Metrics
+#### Overall Metrics
 
 Accuracy (0.72): Overall, the model correctly classifies 72% of instances across all classes. This is a good accuracy rate, indicating that the model performs well in general.
 
-##### Overall Insights
+#### Overall Insights
 
 Class 3 shows the strongest performance with the highest precision, recall, and F1-score, making it the best-predicted class.
 
@@ -477,7 +503,7 @@ Recall (0.84): The model captures 84% of the actual Class 3 instances, showing e
 
 F1-Score (0.85): The high score reflects a strong ability to predict Class 3 correctly and efficiently.
 
-##### Overall Metrics
+#### Overall Metrics
 
 Accuracy (0.72): Overall, the model is 72% accurate in its predictions across all classes. 
 
@@ -494,11 +520,11 @@ XG Boost seems to have the highest AUC scores across all classess. it has the be
 Since we had initially used principal components, lets train the model on the entire dataset so as to get the features that are most significant to our prediction.
 The overall accuracy of the XGBoost model is approximately 72.04%, meaning it correctly classified about 72% of the samples in the dataset.
 
-1)Of all the predictions made for the "Extreme" class, 70% were correct, indicating a relatively balanced rate of false positives.The model correctly identified 67% of actual "Extreme" instances, suggesting a few false negatives.
+1) Of all the predictions made for the "Extreme" class, 70% were correct, indicating a relatively balanced rate of false positives.The model correctly identified 67% of actual "Extreme" instances, suggesting a few false negatives.
 
 2) The model's precision for the "Major" class is 62%, showing a moderate number of false positives. The recall is 66%, indicating the model captures most of the actual "Major" cases.
 
-3)For the "Minor" class, 63% of the predictions were accurate, making this the class with the highest precision.The model correctly identified 71% of the actual "Minor" cases, demonstrating strong recall performance.
+3) For the "Minor" class, 63% of the predictions were accurate, making this the class with the highest precision.The model correctly identified 71% of the actual "Minor" cases, demonstrating strong recall performance.
 
 4) The precision for the "Moderate" class is 47%, showing that there are some false positives. The recall is 46%, suggesting a number of false negatives.
 
@@ -526,7 +552,7 @@ From the above analysis, we can conclude that;
 
 3) Comprehensive Care for Renal Patients: Develop comprehensive care programs for patients undergoing hemodialysis, including regular check-ups, nutritional support, and access to specialized care.
    
-4)Improve Transion Care - Enhance discharge planning and follow-up care for patients discharged to home or self-care. Ensure that they have access to necessary resources and support to prevent readmissions or adverse outcomes.
+4) Improve Transion Care - Enhance discharge planning and follow-up care for patients discharged to home or self-care. Ensure that they have access to necessary resources and support to prevent readmissions or adverse outcomes.
 
 5) Healthcare Policy: Advocate for healthcare policies that emphasize preventive care, early intervention, and resource allocation based on severity and age-related risk factors.
    
