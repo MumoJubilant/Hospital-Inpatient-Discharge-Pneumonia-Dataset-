@@ -248,7 +248,7 @@ For these models, we utilized the entire dataset. The full dataset allows these 
 
 ### Machine Learning Models
 
-**Logistic Regression**
+#### Logistic Regression
 1) For the Extreme class, the model has a relatively higher precision but very low recall. This indicates that when the model predicts the Extreme class, it is correct 57% of the time, but it only identifies 12% of the true Extreme cases.
 
 2) The Major class has moderate precision and recall, meaning that the model predicts this class with some degree of accuracy but still misses a considerable number of actual cases.
@@ -257,7 +257,7 @@ For these models, we utilized the entire dataset. The full dataset allows these 
 
 4) For the Moderate class, the precision and recall are slightly below average, suggesting that the model has difficulty distinguishing this class from other.
 
-**Decision Tree**
+#### Decision Tree
 
 The overall accuracy of the decision tree model is 43.78%, meaning the model correctly classified approximately 44% of the samples.
 
@@ -269,7 +269,7 @@ The overall accuracy of the decision tree model is 43.78%, meaning the model cor
 
 4)The precision for the "Moderate" class is 40%, showing room for improvement. The recall is 40%, indicating a need to reduce false negatives.
 
-**XG Boost**
+#### XG Boost
 
 1) Out of all predictions made for the "Extreme" class, 50% were correct. This indicates that half of the positive predictions are true positives. For Recall, the model correctly identified only 20% of the actual "Extreme" instances, which means there are a significant number of false negatives.
 
@@ -281,7 +281,9 @@ The overall accuracy of the decision tree model is 43.78%, meaning the model cor
 
 ### Deep Learning Models
 
-**Feed Forward Neural Network**
+#### Feed Forward Neural Network
+
+**Interpretation**
 
 **Class 0 (Extreme):**
 
@@ -324,10 +326,11 @@ F1-Score (0.84): Balances precision and recall for Class 3.
 
 Class 3 exhibits the highest precision and recall, making it the best-performing class in terms of both correctly identifying and predicting true positives. The high F1-Score confirms strong performance for this class, with few misclassifications.
 
-**Overall Metrics**
+##### Overall Metrics
+
 Accuracy (0.70): The model correctly classifies 70% of all instances across all classes. This is a general measure of model performance.
 
-**Overall Insights**
+##### Overall Insights
 
 Class 3 performs the best with high precision and recall, indicating the model is very effective in predicting this class.
 
@@ -335,7 +338,9 @@ Class 2 also performs well but has slightly lower precision compared to Class 3.
 
 Class 0 and Class 1 show lower performance, particularly in recall, indicating the model struggles to correctly identify these classes.
 
- **Multi Layer Perceptron.**
+ #### Multi Layer Perceptron.
+
+**Interpretation**
 
 **Class 0 (Extreme):**
 
@@ -378,17 +383,19 @@ F1-Score (0.84): Balances precision and recall for Class 3.
 
 Class 3 shows the highest performance in terms of precision, recall, and F1-Score. This indicates that the model identifies Class 3 instances very well, with a high degree of accuracy. The support is also high, showing it is a significant class in the dataset.
 
-**Overall Metrics**
+##### Overall Metrics
 
 Overall Accuracy (0.70): The model correctly predicts 70% of all instances across all classes.
 
-**Overall Insights**
+##### Overall Insights
 
 Class 0 and Class 1 have lower precision and recall compared to Class 2 and Class 3, indicating they are less well predicted.
 
 Class 2 and Class 3 are identified more accurately, with Class 3 being the best-performing class in terms of precision and recall.
 
-**Artifical Neural Network**
+#### Artifical Neural Network
+
+**Interpretation**
 
 **Class 0 (Extreme):**
 
@@ -422,11 +429,11 @@ Recall (0.84): The model identifies 84% of the actual Class 3 instances, reflect
 
 F1-Score (0.84): The F1-score for Class 3 is the highest, demonstrating the model's strong overall performance for this class.
 
-**Overall Metrics**
+##### Overall Metrics
 
 Accuracy (0.72): Overall, the model correctly classifies 72% of instances across all classes. This is a good accuracy rate, indicating that the model performs well in general.
 
-**Overall Insights**
+##### Overall Insights
 
 Class 3 shows the strongest performance with the highest precision, recall, and F1-score, making it the best-predicted class.
 
@@ -434,7 +441,9 @@ Class 0 and Class 2 have moderate performance, with balanced precision and recal
 
 Class 1 has lower precision and recall compared to other classes, indicating that the model struggles more with predicting this class accurately.
 
-**Ensemble Methods**
+#### Ensemble Methods
+
+**Interpretation**
 
 **Class 0 (Extreme):**
 
@@ -468,7 +477,7 @@ Recall (0.84): The model captures 84% of the actual Class 3 instances, showing e
 
 F1-Score (0.85): The high score reflects a strong ability to predict Class 3 correctly and efficiently.
 
-**Overall Performance**
+##### Overall Metrics
 
 Accuracy (0.72): Overall, the model is 72% accurate in its predictions across all classes. 
 
@@ -480,7 +489,8 @@ The model performs well for Class 3 and reaches our target but there are opportu
 
 XG Boost seems to have the highest AUC scores across all classess. it has the best ability to distinguish between positive and negative classes among the models listed. It performs exceptionally well and can be considered the strongest model.
 
-**Feature Importance**
+### Feature Importance
+
 Since we had initially used principal components, lets train the model on the entire dataset so as to get the features that are most significant to our prediction.
 The overall accuracy of the XGBoost model is approximately 72.04%, meaning it correctly classified about 72% of the samples in the dataset.
 
@@ -495,7 +505,9 @@ The overall accuracy of the XGBoost model is approximately 72.04%, meaning it co
 ![image](https://github.com/user-attachments/assets/c6081ad4-8df5-45d2-8413-136c834e38c8)
 
 # 5. Conclusion
+
 From the above analysis, we can conclude that;
+
 1) The APR Severity of Illness Code is the most significant predictor of the APR Risk of Mortality meaning. This indicates that the more severe a patient's condition, the higher their risk of mortality.
 
 2) Age is a crucial factor in determining mortality risk. Patients aged 70 or older have a significantly higher risk of mortality. This emphasizes the importance of prioritizing elderly patients for closer monitoring and care.
